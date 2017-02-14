@@ -14,6 +14,7 @@ class Api::V1::ListsController < ApplicationController
   end
 
   def create
+
     user_id = current_user.id
     user = User.find(user_id)
     list = user.lists.new(list_params)
