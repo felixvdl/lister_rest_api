@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :users, only: [:show, :create, :update, :destroy]
       resources :sessions, :only => [:create, :destroy]
       resources :lists, only: [:index, :show, :create, :update, :destroy]
+      resources :todos, only: [:index, :show, :create, :update, :destroy]
       get    'verify'  => 'sessions#verify_access_token'
     end
   end
